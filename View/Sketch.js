@@ -5,7 +5,7 @@ controller = new Controller(this);
 }
 
 function draw () {
-    background (0);
+    background (30,230,120);
     ellipse(20,20,20,20);
 
 }
