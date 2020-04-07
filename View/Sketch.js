@@ -1,11 +1,15 @@
+let fondoSketch;
+
 function setup () {
 createCanvas (640, 480);
 
-controller = new Controller(this);
+controller = new Controller();
+fondoSketch = new screenOne ();
 }
 
 function draw () {
     background (0);
+    this.fondoSketch.drawScreen();
 
 }
 

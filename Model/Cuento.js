@@ -1,10 +1,13 @@
 let escena = [];
 let cargar = [];
+let fondoCuento;
 class Cuento {
     Constructor(){
 
     
  
+        fondoCuento = new Fondo (0, 0);
+
     escena = loadStrings("../data/escena.txt");
 
     for (let i = 0; i < escena.length; i++) {
@@ -22,6 +25,10 @@ class Cuento {
         console.log("putos");
     break;
     }
+}
+
+drawCuento () {
+    this.fondoCuento.drawFondo();
 }
    
 }
