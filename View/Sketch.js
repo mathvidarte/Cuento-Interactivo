@@ -9,7 +9,7 @@ fondoSketch = new ScreenOne();
 }
 
 function draw () {
-    background (200);
+    background (0);
     fondoSketch.drawScreen();
     fondoSketch.moverScreen();
 

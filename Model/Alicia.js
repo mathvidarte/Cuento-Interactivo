@@ -1,11 +1,17 @@
+let imagenAlicia;
+
 class Alicia extends Elemento {
     constructor (posX, posY) {
         super(posX, posY);
-        vel = 4;
+        this.posX = posX;
+        this.posY = posY;
+        //vel = 4;
+
+        imagenAlicia =loadImage ("images/Alicia.png");
     }
 
-    draw () {
-        rect (350, 300, 50, 100);
+    drawElemento () {
+        image(imagenAlicia, this.posX, this.posY, 297, 390);
     }
 
     move () {

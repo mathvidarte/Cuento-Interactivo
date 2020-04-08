@@ -17,7 +17,7 @@ class Fondo extends Parallax {
 
     mover() {
         if(mouseX <= 200){
-            if(this.posX > 0){
+            if(this.posX >= 0){
             }else{
                 this.posX += this.vel;
             }
