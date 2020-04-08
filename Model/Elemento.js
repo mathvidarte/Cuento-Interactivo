@@ -13,19 +13,4 @@ class Elemento {
 
     }
 
-    getPosX () {
-        return posX;
-    }
-
-    setPosX () {
-
-    }
-
-    getPosY () {
-        return posY;
-    }
-
-    getVel () {
-        return vel;
-    }
 }

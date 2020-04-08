@@ -14,8 +14,8 @@ class Cuento {
         pocion = cargar[1];
     }
 
-
  }
+ 
  sortList(c) {
     switch (c) { 
     case 'p':

@@ -1,3 +1,5 @@
+
+
 function setup () {
 createCanvas (640, 480);
 
@@ -10,7 +12,7 @@ function draw () {
 
 }
 
-function mousePressed () {
-  
-		controller.sortList(key);
+function moussePressed () {
+        controller.sortList(key);
+        
 }
