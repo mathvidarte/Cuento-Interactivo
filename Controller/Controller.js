@@ -4,7 +4,7 @@ class Controller {
    
 constructor(){
     //cu= new Cuento();
-    this.fondos = new Cuento();
+    fondos = new Cuento();
     
 }
 
@@ -13,7 +13,7 @@ sortList(c) {
 
 }
 
-drawController() {
-    this.fondos.drawCuento();
+drawController () {
+    fondos.drawCuento();
 }
 }

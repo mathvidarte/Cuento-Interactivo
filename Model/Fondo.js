@@ -3,19 +3,17 @@ let fondoImagen;
 class Fondo extends Parallax {
     constructor (posX, posY) {
         super (posX, posY); 
-        this. posX = posX;
+        this.posX = posX;
         this.posY = posY;
         this.vel = 4;
 
-        this.fondoImagen = loadImage ('images/Fondo.png');
+        fondoImagen = loadImage ("images/Fondo.png");
     }
 
-
     drawFondo() {
-        image(fondoImagen, 0, 0);
-}
+        image(fondoImagen,0,140);
+    }
 
-    mover () {
-
+    mover() {
     }
 }

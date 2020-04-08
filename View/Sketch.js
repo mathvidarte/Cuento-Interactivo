@@ -1,20 +1,20 @@
+
 let fondoSketch;
 
 function setup () {
-createCanvas (640, 480);
+createCanvas (900, 700);
 
 controller = new Controller();
-fondoSketch = new screenOne ();
-
+fondoSketch = new ScreenOne();
 }
 
 function draw () {
-    background (0);
+    background (200);
     fondoSketch.drawScreen();
 
 }
 
-function mousePressed () {
-  
-		controller.sortList(key);
+function moussePressed () {
+    controller.sortList(key);
+        
 }

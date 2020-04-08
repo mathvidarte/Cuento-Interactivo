@@ -1,13 +1,12 @@
 let fondoScreen;
-class screenOne {
+class ScreenOne {
     constructor() {
-
-        this.fondoScreen = new Controller ();
+        fondoScreen = new Controller();
     }
 
 
 
-drawScreen() {
-    this.fondoScreen.drawController();
+drawScreen () {
+    fondoScreen.drawController();
 }
 }

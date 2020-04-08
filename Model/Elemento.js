@@ -4,10 +4,10 @@ class Elemento {
     constructor (posX,posY) {
         this.posX = posX;
         this.posY = posY;
-        vel = 4;
+        //this.vel = 4;
     }
 
-    draw () {
+    drawElemento () {
 
     }
 
@@ -15,19 +15,4 @@ class Elemento {
 
     }
 
-    getPosX () {
-        return posX;
-    }
-
-    setPosX () {
-
-    }
-
-    getPosY () {
-        return posY;
-    }
-
-    getVel () {
-        return vel;
-    }
 }
