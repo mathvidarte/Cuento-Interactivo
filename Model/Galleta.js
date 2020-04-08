@@ -11,7 +11,7 @@ class Galleta extends Elemento {
     }
 
     drawElemento () {
-        image(imagenGalleta, this.posX, this.posY, 73, 77);
+        image(imagenGalleta, this.posX, this.posY, 83, 87);
     }
 
     move () {
