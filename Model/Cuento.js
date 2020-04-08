@@ -3,11 +3,13 @@ let cargar = [];
 let fondoCuento;
 class Cuento {
     constructor(){
-    escena = loadStrings("../data/escena.txt");
+    this.escena = loadStrings("../data/escena.txt");
+    this.titulo = loadImage ("images/titulo.png");
     fondoCuento = new Fondo(0,0);
 
     for (let i = 0; i < escena.length; i++) {
-        cargar = escena[i].split(",");
+        cargar = escena[i].split("_");
+
         
         alicia = cargar[2];
         pocion = cargar[1];
@@ -17,6 +19,11 @@ class Cuento {
 
     drawCuento() {
         fondoCuento.drawFondo();
+        imageMode(CENTER);
+        image(this.titulo,450,50);
+        imageMode(CORNER);
+        fill(255);
+        text(this.escena,30,100);
     }
 
     sortList(c) {
@@ -26,7 +33,8 @@ class Cuento {
         break;
         }
     }
-   
+
+
     
-   
-}
+    }
+       
