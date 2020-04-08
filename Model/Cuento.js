@@ -1,8 +1,8 @@
-let escena = [];
+let escena =[];
 let cargar = [];
 
 let fondoCuento;
-let fondoDosCuento;
+ let fondoDosCuento;
 
 let aliciaa;
 let galletaa;
@@ -13,16 +13,29 @@ let puertaa;
 
 class Cuento {
     constructor(){
-    this.escena = loadStrings("../data/escena.txt");
+    this.escena = loadStrings("./data/escena.txt");
     this.titulo = loadImage ("images/titulo.png");
 
-    for (let i = 0; i < escena.length; i++) {
-        cargar = escena[i].split("_");
+   for (let i = 0; i< this.escena.lenght; i++) {
+        this.cargar = this.escena[i].split(" ");
+        if(this.cargar.icludes("Alicia")){
+            ellipse(20,20,20,20);
+            alicia = [2]
 
-        alicia = cargar[2];
-        pocion = cargar[1];
+
+            
+        }
+
+      
 
     }
+    //var x= "1.2.3";
+    //x = x.split(".");
+    
+   console.log(this.escena);
+
+
+
 
     //fondos
     fondoCuento = new Fondo(-221,140);
@@ -52,6 +65,9 @@ class Cuento {
         galletaa.drawElemento();
         llavee.drawElemento();
         pocioon.drawElemento();
+
+       
+
         
     }
     moverCuento() {
