@@ -1,18 +1,20 @@
 
+let fondoSketch;
 
 function setup () {
-createCanvas (640, 480);
+createCanvas (900, 700);
 
-controller = new Controller(this);
+controller = new Controller();
+fondoSketch = new ScreenOne();
 }
 
 function draw () {
-    background (30,230,120);
-    ellipse(20,20,20,20);
+    background (200);
+    fondoSketch.drawScreen();
 
 }
 
 function moussePressed () {
-        controller.sortList(key);
+    controller.sortList(key);
         
 }

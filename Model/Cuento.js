@@ -1,11 +1,10 @@
 let escena = [];
 let cargar = [];
+let fondoCuento;
 class Cuento {
-    Constructor(){
-
-    
- 
+    constructor(){
     escena = loadStrings("../data/escena.txt");
+    fondoCuento = new Fondo(0,0);
 
     for (let i = 0; i < escena.length; i++) {
         cargar = escena[i].split(",");
@@ -15,13 +14,19 @@ class Cuento {
     }
 
  }
- 
- sortList(c) {
-    switch (c) { 
-    case 'p':
-        console.log("putos");
-    break;
+
+    drawCuento() {
+        fondoCuento.drawFondo();
     }
-}
+
+    sortList(c) {
+        switch (c) { 
+        case 'p':
+            console.log("putos");
+        break;
+        }
+    }
+   
+    
    
 }
