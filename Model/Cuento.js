@@ -64,10 +64,10 @@ class Cuento {
         text(this.escena,30,100);
 
         //elementos
-        /*puertaa.drawElemento();
+        puertaa.drawElemento();
         galletaa.drawElemento();
         llavee.drawElemento();
-        pocioon.drawElemento();*/
+        pocioon.drawElemento();
         aliciaa.drawElemento();
 
        
