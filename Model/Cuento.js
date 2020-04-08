@@ -2,7 +2,8 @@ let escena =[];
 let cargar = [];
 
 let fondoCuento;
- let fondoDosCuento;
+let fondoDosCuento;
+let fondoTresCuento;
 
 let aliciaa;
 let galletaa;
@@ -22,11 +23,8 @@ class Cuento {
             ellipse(20,20,20,20);
             alicia = [2]
 
-
-            
         }
 
-      
 
     }
     //var x= "1.2.3";
@@ -38,33 +36,39 @@ class Cuento {
 
 
     //fondos
-    fondoCuento = new Fondo(-221,140);
-    fondoDosCuento = new FondoDos (0,140);
+    fondoTresCuento = new FondoTres(-400,141);
+    fondoDosCuento = new FondoDos(-308,43);
+    fondoCuento = new Fondo(-500,351);
 
     //elementos
     aliciaa = new Alicia (550, 300);
     galletaa = new Galleta (220, 365);
     llavee = new Llave (280, 410);
     pocioon = new Pocion (120, 290);
-    puertaa = new Puerta (400, 325);
+    puertaa = new Puerta (400, 326);
 
 
  }
 
     drawCuento() {
+        //fondos
+        fondoTresCuento.drawFondo();
+        fondoDosCuento.drawFondo();
         fondoCuento.drawFondo();
+
+        //titulo
         imageMode(CENTER);
         image(this.titulo,450,50);
         imageMode(CORNER);
         fill(255);
         text(this.escena,30,100);
-        puertaa.drawElemento();
-        puertaa.drawElemento();
-        fondoDosCuento.drawFondo();
-        aliciaa.drawElemento();
+
+        //elementos
+        /*puertaa.drawElemento();
         galletaa.drawElemento();
         llavee.drawElemento();
-        pocioon.drawElemento();
+        pocioon.drawElemento();*/
+        aliciaa.drawElemento();
 
        
 
@@ -73,6 +77,7 @@ class Cuento {
     moverCuento() {
         fondoCuento.mover();
         fondoDosCuento.mover();
+        fondoTresCuento.mover();
 
     }
 

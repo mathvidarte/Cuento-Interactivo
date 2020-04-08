@@ -5,7 +5,7 @@ class Fondo extends Parallax {
         super (posX, posY); 
         this.posX = posX;
         this.posY = posY;
-        this.vel = 2;
+        this.vel = 3;
 
         fondoImagen = loadImage ("images/Fondo.png");
     }
@@ -24,13 +24,13 @@ class Fondo extends Parallax {
         }
     
         if(mouseX >= 700){
-            if(this.posX < -221){     
+            if(this.posX < -400){     
             }else{
                 this.posX -= this.vel; 
             }  
         }
     
-        console.log(this.vel);
+        //console.log(this.vel);
         console.log(this.posX);
     }
 }
