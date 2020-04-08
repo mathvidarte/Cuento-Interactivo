@@ -15,23 +15,31 @@ let word;
 
 class Cuento {
     constructor(){
-
-    this.escena = loadStrings("../data/escena.txt");
-
-
+        
+        this.escena = loadStrings("./data/escena.txt");
     this.titulo = loadImage ("images/titulo.png");
 
-    for (let i = 0; i < escena.length; i++) {
-        
-        cargar = escena[i].split(" ");
+        for (let i = 0; i< this.escena.length; i++) {
+            
+            this.cargar = this.escena[i].split(" ");
 
-            if (escena[0].contentEquals("puertecita")) {
-                puertaa = new Puerta (400, 325);
+            console.log(cargar);
 
+            if(this.escena[0].includes("puertecita")){
+                
+
+    
+    
+                
             }
-            word = cargar[1];
+    
+          
+    
+        }
+        //var x= "1.2.3";
+        //x = x.split(".");
         
-    }
+       //console.log(this.escena);
 
     //fondos
     fondoCuento = new Fondo(-221,140);
@@ -42,6 +50,7 @@ class Cuento {
     galletaa = new Galleta (220, 365);
     llavee = new Llave (280, 410);
     pocioon = new Pocion (120, 290);
+    puertaa = new Puerta (400, 325);
    
 
  }

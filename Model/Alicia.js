@@ -1,6 +1,6 @@
 let imagenAlicia;
 let imagenAliciaBrilla;
-String = word;
+
 
 class Alicia extends Elemento {
     constructor (word, posX, posY) {

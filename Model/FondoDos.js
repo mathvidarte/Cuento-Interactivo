@@ -29,7 +29,7 @@ class FondoDos extends Parallax{
             }  
         }
     
-        console.log(this.vel);
-        console.log(this.posX);
+        //console.log(this.vel);
+        //console.log(this.posX);
     }
 }
