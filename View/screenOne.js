@@ -9,4 +9,8 @@ class ScreenOne {
 drawScreen () {
     fondoScreen.drawController();
 }
+
+moverScreen () {
+    fondoScreen.moverController();
+}
 }

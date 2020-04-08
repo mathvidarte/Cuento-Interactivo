@@ -4,7 +4,7 @@ let fondoCuento;
 class Cuento {
     constructor(){
     escena = loadStrings("../data/escena.txt");
-    fondoCuento = new Fondo(0,0);
+    fondoCuento = new Fondo(-221,140);
 
     for (let i = 0; i < escena.length; i++) {
         cargar = escena[i].split(",");
@@ -17,6 +17,11 @@ class Cuento {
 
     drawCuento() {
         fondoCuento.drawFondo();
+        
+    }
+    moverCuento() {
+        fondoCuento.mover();
+        
     }
 
     sortList(c) {

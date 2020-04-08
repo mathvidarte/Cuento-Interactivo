@@ -15,4 +15,7 @@ sortList(c) {
 drawController () {
     fondos.drawCuento();
 }
+moverController () {
+    fondos.moverCuento();
+}
 }

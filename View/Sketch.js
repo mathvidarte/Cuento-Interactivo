@@ -11,10 +11,12 @@ fondoSketch = new ScreenOne();
 function draw () {
     background (200);
     fondoSketch.drawScreen();
+    fondoSketch.moverScreen();
 
 }
 
 function moussePressed () {
     controller.sortList(key);
+
         
 }
