@@ -4,13 +4,11 @@ class ScreenOne {
         fondoScreen = new Controller();
     }
 
+    drawScreen() {
+        fondoScreen.drawController();
+    }
 
-
-drawScreen () {
-    fondoScreen.drawController();
-}
-
-moverScreen () {
-    fondoScreen.moverController();
-}
+    moverScreen() {
+        fondoScreen.moverController();
+    }
 }

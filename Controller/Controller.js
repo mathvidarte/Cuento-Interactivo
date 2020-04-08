@@ -1,22 +1,16 @@
-let cu;
 let fondos;
 class Controller {
-   
-constructor(){
-    //cu= new Cuento();
-    fondos = new Cuento();
-    
-}
 
-sortList(c) {
-  //  cu.sortList(c);
+    constructor() {
+        fondos = new Cuento();
 
-}
+    }
 
-drawController () {
-    fondos.drawCuento();
-}
-moverController () {
-    fondos.moverCuento();
-}
+
+    drawController() {
+        fondos.drawCuento();
+    }
+    moverController() {
+        fondos.moverCuento();
+    }
 }

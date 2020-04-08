@@ -1,9 +1,8 @@
-let escena =[];
-let cargar = [];
-
 let fondoCuento;
 let fondoDosCuento;
 let fondoTresCuento;
+
+let titulo;
 
 let aliciaa;
 let galletaa;
@@ -11,29 +10,22 @@ let llavee;
 let pocioon;
 let puertaa;
 
+let escena =[];
+let cargar =[];
 
 class Cuento {
     constructor(){
-    this.escena = loadStrings("./data/escena.txt");
-    this.titulo = loadImage ("images/titulo.png");
+    escena = loadStrings("./data/escena.txt");
+    titulo = loadImage ("images/titulo.png");
 
-   for (let i = 0; i< this.escena.lenght; i++) {
-        this.cargar = this.escena[i].split(" ");
-        if(this.cargar.icludes("Alicia")){
-            ellipse(20,20,20,20);
-            alicia = [2]
-
-        }
-
-
+   for (let i = 0; i < escena.lenght; i++) {
+        cargar = escena.get(i).split(" ");
     }
-    //var x= "1.2.3";
-    //x = x.split(".");
-    
-   console.log(this.escena);
 
+    console.log(cargar)
 
-
+     /*if(cargar.includes("Alicia")){ 
+        }*/
 
     //fondos
     fondoTresCuento = new FondoTres(-400,141);
@@ -44,8 +36,8 @@ class Cuento {
     aliciaa = new Alicia (550, 300);
     galletaa = new Galleta (220, 365);
     llavee = new Llave (280, 410);
-    pocioon = new Pocion (120, 290);
-    puertaa = new Puerta (400, 326);
+    pocioon = new Pocion (-400, 290);
+    puertaa = new Puerta (400, 327);
 
 
  }
@@ -58,10 +50,10 @@ class Cuento {
 
         //titulo
         imageMode(CENTER);
-        image(this.titulo,450,50);
+        image(titulo,450,50);
         imageMode(CORNER);
         fill(255);
-        text(this.escena,30,100);
+        text(escena,30,100);
 
         //elementos
         puertaa.drawElemento();
@@ -79,15 +71,10 @@ class Cuento {
         fondoDosCuento.mover();
         fondoTresCuento.mover();
 
+        pocioon.move();
+
     }
 
-    sortList(c) {
-        switch (c) { 
-        case 'p':
-            console.log("putos");
-        break;
-        }
-    }
 
 
     
