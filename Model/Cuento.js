@@ -10,18 +10,27 @@ let llavee;
 let pocioon;
 let puertaa;
 
+let word;
+
 
 class Cuento {
     constructor(){
+
     this.escena = loadStrings("../data/escena.txt");
+
+
     this.titulo = loadImage ("images/titulo.png");
 
     for (let i = 0; i < escena.length; i++) {
-        cargar = escena[i].split("_");
+        
+        cargar = escena[i].split(" ");
 
-        alicia = cargar[2];
-        pocion = cargar[1];
+            if (escena[0].contentEquals("puertecita")) {
+                puertaa = new Puerta (400, 325);
 
+            }
+            word = cargar[1];
+        
     }
 
     //fondos
@@ -29,12 +38,11 @@ class Cuento {
     fondoDosCuento = new FondoDos (0,140);
 
     //elementos
-    aliciaa = new Alicia (550, 300);
+    aliciaa = new Alicia (word, 550, 300);
     galletaa = new Galleta (220, 365);
     llavee = new Llave (280, 410);
     pocioon = new Pocion (120, 290);
-    puertaa = new Puerta (400, 325);
-
+   
 
  }
 
@@ -45,7 +53,7 @@ class Cuento {
         imageMode(CORNER);
         fill(255);
         text(this.escena,30,100);
-        puertaa.drawElemento();
+
         puertaa.drawElemento();
         fondoDosCuento.drawFondo();
         aliciaa.drawElemento();

@@ -11,6 +11,10 @@ class Elemento {
 
     }
 
+    drawElementoBrilla () {
+
+    }
+
     move () {
 
     }
