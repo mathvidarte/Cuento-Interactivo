@@ -1,5 +1,4 @@
-let escena =[];
-let cargar = [];
+
 
 let fondoCuento;
 let fondoDosCuento;
@@ -12,16 +11,25 @@ let pocioon;
 let puertaa;
 
 
+
 class Cuento {
     constructor(){
+        let escena =[];
+let cargar = [];
     this.escena = loadStrings("./data/escena.txt");
     this.titulo = loadImage ("images/titulo.png");
+     //botones
+   this.botonDer = loadImage ("images/der.png");
+   this.botonIzq = loadImage ("images/izq.png");
+    this.aliciaa = new Alicia (550, 300);
 
    for (let i = 0; i< this.escena.lenght; i++) {
-        this.cargar = this.escena[i].split(" ");
-        if(this.cargar.icludes("Alicia")){
-            ellipse(20,20,20,20);
-            alicia = [2]
+        this.cargar[i] = this.escena[i].split(" ");
+        if(this.cargar[i].includes("Alicia")){
+            this.aliciaa.drawElemento();
+            console.log("entre");
+           
+            
 
         }
 
@@ -31,6 +39,7 @@ class Cuento {
     //x = x.split(".");
     
    console.log(this.escena);
+  
 
 
 
@@ -41,7 +50,7 @@ class Cuento {
     fondoCuento = new Fondo(-500,351);
 
     //elementos
-    aliciaa = new Alicia (550, 300);
+    //aliciaa = new Alicia (550, 300);
     galletaa = new Galleta (220, 365);
     llavee = new Llave (280, 410);
     pocioon = new Pocion (120, 290);
@@ -63,12 +72,21 @@ class Cuento {
         fill(255);
         text(this.escena,30,100);
 
+        //botones
+        imageMode(CENTER);
+        image(this.botonDer,875,350,50,50);
+        imageMode(CORNER);
+        imageMode(CENTER);
+
+        image(this.botonIzq,25,350,50,50);
+        imageMode(CORNER);
+
         //elementos
         puertaa.drawElemento();
         galletaa.drawElemento();
         llavee.drawElemento();
         pocioon.drawElemento();
-        aliciaa.drawElemento();
+        //aliciaa.drawElemento();
 
        
 

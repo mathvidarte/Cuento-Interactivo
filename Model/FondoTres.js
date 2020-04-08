@@ -15,14 +15,14 @@ class FondoTres extends Parallax{
     }
 
    mover() {
-        if(mouseX <= 200){
+    if(mouseX > 0 && mouseX < 100 && mouseY > 325 && mouseY < 375){
             if(this.posX >= 0){
             }else{
                 this.posX += this.vel;
             }
         }
     
-        if(mouseX >= 700){
+        if(mouseX > 825 && mouseX < 875 && mouseY > 325 && mouseY < 375){
             if(this.posX < -400){     
             }else{
                 this.posX -= this.vel; 
