@@ -6,6 +6,10 @@ let fondoDosCuento;
 
 let aliciaa;
 let galletaa;
+let llavee;
+let pocioon;
+let puertaa;
+
 
 class Cuento {
     constructor(){
@@ -17,6 +21,7 @@ class Cuento {
 
         alicia = cargar[2];
         pocion = cargar[1];
+
     }
 
     //fondos
@@ -26,8 +31,10 @@ class Cuento {
     //elementos
     aliciaa = new Alicia (550, 300);
     galletaa = new Galleta (220, 365);
+    llavee = new Llave (280, 410);
+    pocioon = new Pocion (120, 290);
+    puertaa = new Puerta (400, 325);
 
-   
 
  }
 
@@ -38,9 +45,13 @@ class Cuento {
         imageMode(CORNER);
         fill(255);
         text(this.escena,30,100);
+        puertaa.drawElemento();
+        puertaa.drawElemento();
         fondoDosCuento.drawFondo();
         aliciaa.drawElemento();
         galletaa.drawElemento();
+        llavee.drawElemento();
+        pocioon.drawElemento();
         
     }
     moverCuento() {
