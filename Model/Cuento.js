@@ -28,9 +28,7 @@ let cargar = [];
         if(this.cargar[i].includes("Alicia")){
             this.aliciaa.drawElemento();
             console.log("entre");
-           
-            
-
+    
         }
 
 

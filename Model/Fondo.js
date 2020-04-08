@@ -1,18 +1,18 @@
 let fondoImagen;
 
 class Fondo extends Parallax {
-    constructor (posX, posY) {
-        super (posX, posY); 
+    constructor(posX, posY) {
+        super(posX, posY);
         this.posX = posX;
         this.posY = posY;
-        this.vel = 3;
+        this.vel = 2;
 
-        fondoImagen = loadImage ("images/Fondo.png");
+        fondoImagen = loadImage("images/Fondo.png");
     }
 
     drawFondo() {
-        image(fondoImagen,this.posX,this.posY);
-       
+        image(fondoImagen, this.posX, this.posY);
+
     }
 
     mover() {
@@ -29,8 +29,8 @@ class Fondo extends Parallax {
                 this.posX -= this.vel; 
             }  
         }
-    
+
         //console.log(this.vel);
-        console.log(this.posX);
+        //console.log(this.posX);
     }
 }

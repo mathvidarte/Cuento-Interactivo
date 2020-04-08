@@ -1,8 +1,8 @@
 let imagenFondoTres;
 
-class FondoTres extends Parallax{
-    constructor (posX, posY) {
-        super (posX, posY);
+class FondoTres extends Parallax {
+    constructor(posX, posY) {
+        super(posX, posY);
         this.posX = posX;
         this.posY = posY;
         this.vel = 1;
@@ -10,7 +10,7 @@ class FondoTres extends Parallax{
         imagenFondoTres = loadImage("images/FondoTres.png");
     }
 
-    drawFondo () {
+    drawFondo() {
         image(imagenFondoTres, this.posX, this.posY);
     }
 
@@ -28,7 +28,7 @@ class FondoTres extends Parallax{
                 this.posX -= this.vel; 
             }  
         }
-    
+
         //console.log(this.vel);
         //console.log(this.posX);
     }
