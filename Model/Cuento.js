@@ -11,22 +11,24 @@ let llavee;
 let pocioon;
 let puertaa;
 
-let word;
-
 
 class Cuento {
     constructor(){
-        
-        this.escena = loadStrings("./data/escena.txt");
+    this.escena = loadStrings("./data/escena.txt");
     this.titulo = loadImage ("images/titulo.png");
 
-   for (let i = 0; i< this.escena.lenght; i++) {
-        this.cargar = this.escena[i].split(" ");
-        if(this.cargar.icludes("Alicia")){
-            ellipse(20,20,20,20);
-            alicia = [2]
 
-        }
+
+   for (let i = 0; i < this.escena.length; i++) {
+    console.log("arepa");
+        this.cargar = this.escena[i].split(" ");
+        //if(this.cargar[1].equals("puertecita")){
+
+            //aliciaa = new Alicia (550, 300); 
+            
+            
+
+        //}
 
 
     }
@@ -35,23 +37,8 @@ class Cuento {
     
    console.log(this.escena);
 
-            console.log(cargar);
 
-            if(this.escena[0].includes("puertecita")){
-                
 
-    
-    
-                
-            }
-    
-          
-    
-        }
-        //var x= "1.2.3";
-        //x = x.split(".");
-        
-       //console.log(this.escena);
 
     //fondos
     fondoTresCuento = new FondoTres(-400,141);
@@ -59,10 +46,11 @@ class Cuento {
     fondoCuento = new Fondo(-500,351);
 
     //elementos
-    aliciaa = new Alicia (word, 550, 300);
-    galletaa = new Galleta (220, 365);
+    
+   
+    galletaa = new Galleta (190, 365);
     llavee = new Llave (280, 410);
-    pocioon = new Pocion (120, 290);
+    pocioon = new Pocion (-500, 290);
     puertaa = new Puerta (400, 326);
 
 
@@ -86,7 +74,7 @@ class Cuento {
         galletaa.drawElemento();
         llavee.drawElemento();
         pocioon.drawElemento();
-        aliciaa.drawElemento();
+        //aliciaa.drawElemento();
 
        
 
@@ -96,6 +84,7 @@ class Cuento {
         fondoCuento.mover();
         fondoDosCuento.mover();
         fondoTresCuento.mover();
+        pocioon.move();
 
     }
 
