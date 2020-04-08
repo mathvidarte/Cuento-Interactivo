@@ -1,11 +1,18 @@
+let imagenPocion;
+
 class Pocion extends Elemento {
     constructor (posX, posY) {
         super(posX, posY);
+        this.posX = posX;
+        this.posY = posY;
+
+        imagenPocion = loadImage('images/Pocion.png');
         
     }
 
-    draw () {
-        rect (250, 300, 20, 20);
+    drawElemento () {
+        image(imagenPocion, this.posX, this.posY, 70, 150);
+       
     }
 
     move () {

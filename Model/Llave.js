@@ -1,14 +1,20 @@
+let imagenLlave;
+
 class Llave extends Elemento {
     constructor (posX, posY) {
         super(posX, posY);
-        vel = 4;
+        this.posX = posX;
+        this.posY = posY;
+        //vel = 4;
+
+        imagenLlave = loadImage('images/llave.png');
     }
 
-    draw () {
-        rect (100, 100, 50, 50);
+    drawElemento () {
+        image(imagenLlave, this.posX, this.posY, 72, 36);
     }
 
     move () {
-        posX -= vel;
+       // posX -= vel;
     }
 }
