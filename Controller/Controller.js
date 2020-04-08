@@ -3,16 +3,17 @@ let fondos;
 class Controller {
    
 constructor(){
-    cu= new Cuento();
-    fondos = new Cuento();
+    //cu= new Cuento();
+    this.fondos = new Cuento();
     
 }
+
 sortList(c) {
-    cu.sortList(c);
+  //  cu.sortList(c);
 
 }
 
-drawController () {
+drawController() {
     this.fondos.drawCuento();
 }
 }

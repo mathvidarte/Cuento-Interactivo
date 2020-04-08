@@ -2,7 +2,7 @@
 
 class Parallax {
     constructor (posX, posY) {
-        this.PosX = posX;
+        this.posX = posX;
         this.posY = posY;
         this.vel = 4;
         
