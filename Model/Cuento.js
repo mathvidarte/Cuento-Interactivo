@@ -3,6 +3,7 @@ let cargar = [];
 
 let fondoCuento;
 let fondoDosCuento;
+let fondoTresCuento;
 
 let aliciaa;
 let galletaa;
@@ -19,9 +20,20 @@ class Cuento {
         this.escena = loadStrings("./data/escena.txt");
     this.titulo = loadImage ("images/titulo.png");
 
-        for (let i = 0; i< this.escena.length; i++) {
-            
-            this.cargar = this.escena[i].split(" ");
+   for (let i = 0; i< this.escena.lenght; i++) {
+        this.cargar = this.escena[i].split(" ");
+        if(this.cargar.icludes("Alicia")){
+            ellipse(20,20,20,20);
+            alicia = [2]
+
+        }
+
+
+    }
+    //var x= "1.2.3";
+    //x = x.split(".");
+    
+   console.log(this.escena);
 
             console.log(cargar);
 
@@ -42,38 +54,48 @@ class Cuento {
        //console.log(this.escena);
 
     //fondos
-    fondoCuento = new Fondo(-221,140);
-    fondoDosCuento = new FondoDos (0,140);
+    fondoTresCuento = new FondoTres(-400,141);
+    fondoDosCuento = new FondoDos(-308,43);
+    fondoCuento = new Fondo(-500,351);
 
     //elementos
     aliciaa = new Alicia (word, 550, 300);
     galletaa = new Galleta (220, 365);
     llavee = new Llave (280, 410);
     pocioon = new Pocion (120, 290);
-    puertaa = new Puerta (400, 325);
-   
+    puertaa = new Puerta (400, 326);
+
 
  }
 
     drawCuento() {
+        //fondos
+        fondoTresCuento.drawFondo();
+        fondoDosCuento.drawFondo();
         fondoCuento.drawFondo();
+
+        //titulo
         imageMode(CENTER);
         image(this.titulo,450,50);
         imageMode(CORNER);
         fill(255);
         text(this.escena,30,100);
 
+        //elementos
         puertaa.drawElemento();
-        fondoDosCuento.drawFondo();
-        aliciaa.drawElemento();
         galletaa.drawElemento();
         llavee.drawElemento();
         pocioon.drawElemento();
+        aliciaa.drawElemento();
+
+       
+
         
     }
     moverCuento() {
         fondoCuento.mover();
         fondoDosCuento.mover();
+        fondoTresCuento.mover();
 
     }
 

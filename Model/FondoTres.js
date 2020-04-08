@@ -1,29 +1,29 @@
-let imagenFondoDos;
+let imagenFondoTres;
 
-class FondoDos extends Parallax{
+class FondoTres extends Parallax{
     constructor (posX, posY) {
         super (posX, posY);
         this.posX = posX;
         this.posY = posY;
-        this.vel = 2;
+        this.vel = 1;
 
-        imagenFondoDos = loadImage("images/FondoDos.png");
+        imagenFondoTres = loadImage("images/FondoTres.png");
     }
 
     drawFondo () {
-        image(imagenFondoDos, this.posX, this.posY);
+        image(imagenFondoTres, this.posX, this.posY);
     }
 
    mover() {
         if(mouseX <= 200){
-            if(this.posX >= -70){
+            if(this.posX >= 0){
             }else{
                 this.posX += this.vel;
             }
         }
     
         if(mouseX >= 700){
-            if(this.posX < -305){     
+            if(this.posX < -400){     
             }else{
                 this.posX -= this.vel; 
             }  
