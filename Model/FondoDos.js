@@ -22,7 +22,7 @@ class FondoDos extends Parallax{
             }
         }
     
-        if(mouseX > 825 && mouseX < 875 && mouseY > 325 && mouseY < 375){
+        if(mouseX > 840 && mouseX < 900 && mouseY > 325 && mouseY < 375){
             if(this.posX < -305){     
             }else{
                 this.posX -= this.vel; 

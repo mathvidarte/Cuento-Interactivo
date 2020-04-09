@@ -13,7 +13,7 @@ class Galleta extends Elemento {
         image(imagenGalleta, this.posX, this.posY, 83, 87);
 
         if (mouseX > this.posX && mouseX <this.posX+83 && mouseY > this.posY && mouseY < this.posY +87){
-            image(imagenGalletaBrilla, this.posX-15, this.posY-10, 105, 110);
+            image(imagenGalletaBrilla, this.posX-12, this.posY-10, 105, 110);
         }
 
 
@@ -28,7 +28,7 @@ class Galleta extends Elemento {
             }
         }
     }
-    if(mouseX > 825 && mouseX < 875 && mouseY > 325 && mouseY < 375){
+    if(mouseX > 840 && mouseX < 900 && mouseY > 325 && mouseY < 375){
         if (mouseX >= 700) {
             if (this.posX < -220) {
             } else {
