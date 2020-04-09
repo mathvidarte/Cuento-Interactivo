@@ -17,12 +17,12 @@ class Alicia extends Elemento {
     }
 
     drawElemento() {
-        image(imagenAlicia, this.posX, this.posY, this.tam, this.tamDos);
-    
+       image(imagenAlicia, this.posX, this.posY, this.tam, this.tamDos);
+        //image(imagenAlicia, this.posX, this.posY, 297, 390);
 
         
         if (mouseX > this.posX && mouseX <this.posX+297 && mouseY > this.posY && mouseY < this.posY +390){
-            image(imagenAliciaBrilla, this.posX-30, this.posY-55, 370, 500);
+            image(imagenAliciaBrilla, this.posX-45, this.posY-50, this.tam, this.tamDos);
         }
     }
 

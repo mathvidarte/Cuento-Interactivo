@@ -1,17 +1,21 @@
 let imagenFondoDos;
+let tarde;
 
 class FondoDos extends Parallax{
     constructor (posX, posY) {
         super (posX, posY);
-        this.posX = posX;
-        this.posY = posY;
         this.vel = 1.5;
 
         imagenFondoDos = loadImage("images/FondoDos.png");
+        tarde = loadImage("images/tarde.png");
     }
 
     drawFondo () {
         image(imagenFondoDos, this.posX, this.posY);
+    }
+
+    drawTarde() {
+        image(tarde, this.posX + 950, this.posY + 160);
     }
 
    mover() {
