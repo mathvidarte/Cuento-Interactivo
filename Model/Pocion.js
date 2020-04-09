@@ -21,19 +21,23 @@ class Pocion extends Elemento {
     
 
     move() {
+        if(mouseX > 0 && mouseX < 100 && mouseY > 325 && mouseY < 375){
         if (mouseX <= 200) {
             if (this.posX >= 100) {
             } else {
                 this.posX += this.vel;
             }
         }
+    }
 
+    if(mouseX > 825 && mouseX < 875 && mouseY > 325 && mouseY < 375){
         if (mouseX >= 700) {
             if (this.posX < -300) {
             } else {
                 this.posX -= this.vel;
             }
         }
+    }
 
         //console.log(this.posX);
 

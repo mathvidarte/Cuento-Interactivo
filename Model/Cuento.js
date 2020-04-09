@@ -1,8 +1,11 @@
+let escena = [];
+let cargar = [];
+
+let titulo;
+
 let fondoCuento;
 let fondoDosCuento;
 let fondoTresCuento;
-
-let titulo;
 
 let aliciaa;
 let galletaa;
@@ -10,25 +13,38 @@ let llavee;
 let pocioon;
 let puertaa;
 
-let escena =[];
-let cargar =[];
+
 
 
 
 class Cuento {
     constructor(){
 
-    escena = loadStrings("./data/escena.txt");
-    titulo = loadImage ("images/titulo.png");
-
-   for (let i = 0; i < escena.lenght; i++) {
-        cargar = escena.get(i).split(" ");
+        let escena =[];
+        let cargar = [];
+            this.escena = loadStrings("./data/escena.txt");
+            this.titulo = loadImage ("images/titulo.png");
+             //botones
+           this.botonDer = loadImage ("images/der.png");
+           this.botonIzq = loadImage ("images/izq.png");
+            this.aliciaa = new Alicia (550, 300);
+        
+           for (let i = 0; i< this.escena.lenght; i++) {
+                this.cargar[i] = this.escena[i].split(" ");
+                if(this.cargar[i].includes("Alicia")){
+                    this.aliciaa.drawElemento();
+                    console.log("entre");
     }
+}
 
-    console.log(cargar)
+    
+    //var x= "1.2.3";
+    //x = x.split(".");
+    
+  
 
-     /*if(cargar.includes("Alicia")){ 
-        }*/
+
+
 
     //fondos
     fondoTresCuento = new FondoTres(-400,141);
@@ -45,30 +61,38 @@ class Cuento {
 
  }
 
-    drawCuento() {
-        //fondos
-        fondoTresCuento.drawFondo();
-        fondoDosCuento.drawFondo();
-        fondoCuento.drawFondo();
+ drawCuento() {
+     //fondos
+     fondoTresCuento.drawFondo();
+     fondoDosCuento.drawFondo();
+     fondoCuento.drawFondo();
 
-        //titulo
-        imageMode(CENTER);
-        image(titulo,450,50);
-        imageMode(CORNER);
-        fill(255);
-        text(escena,30,100);
+     //titulo
+     imageMode(CENTER);
+     image(this.titulo,450,50);
+     imageMode(CORNER);
+     fill(255);
+     text(this.escena,30,100);
 
-        //elementos
-        puertaa.drawElemento();
-        galletaa.drawElemento();
-        llavee.drawElemento();
-        pocioon.drawElemento();
-        aliciaa.drawElemento();
+     
 
-       
+     //elementos
+     puertaa.drawElemento();
+     galletaa.drawElemento();
+     llavee.drawElemento();
+     pocioon.drawElemento();
+     aliciaa.drawElemento();
 
-        
-    }
+     //botones
+     imageMode(CENTER);
+     image(this.botonDer,875,350,50,50);
+     imageMode(CORNER);
+     imageMode(CENTER);
+
+     image(this.botonIzq,25,350,50,50);
+     imageMode(CORNER);
+ }
+
     moverCuento() {
         fondoCuento.mover();
         fondoDosCuento.mover();
@@ -82,6 +106,13 @@ class Cuento {
 
     }
 
+    sortList(c) {
+        switch (c) { 
+        case 'p':
+            console.log("putos");
+        break;
+        }
+    }
 
 
     
