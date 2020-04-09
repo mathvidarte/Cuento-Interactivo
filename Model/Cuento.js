@@ -10,14 +10,19 @@ let llavee;
 let pocioon;
 let puertaa;
 
+let esTarde;
+
 let escena = [];
 let cargar = [];
 
 class Cuento {
     constructor() {
+
+        esTarde = false;
        
         this.escena = loadStrings("./data/escena.txt");
         this.titulo = loadImage("images/titulo.png");
+        
 
         //botones
         this.botonDer = loadImage("images/der.png");
@@ -46,6 +51,11 @@ class Cuento {
         fondoTresCuento.drawFondo();
         fondoDosCuento.drawFondo();
         fondoCuento.drawFondo();
+
+        if(esTarde == true){
+            fondoDosCuento.drawTarde();
+
+        }
 
         //titulo
         imageMode(CENTER);
