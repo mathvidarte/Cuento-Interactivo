@@ -1,4 +1,6 @@
 let imagenAlicia;
+let imagenAliciaBrilla;
+
 
 class Alicia extends Elemento {
     constructor(posX, posY) {

@@ -14,19 +14,19 @@ class FondoTres extends Parallax {
         image(imagenFondoTres, this.posX, this.posY);
     }
 
-    mover() {
-        if (mouseX <= 200) {
-            if (this.posX >= 0) {
-            } else {
+   mover() {
+    if(mouseX > 0 && mouseX < 100 && mouseY > 325 && mouseY < 375){
+            if(this.posX >= 0){
+            }else{
                 this.posX += this.vel;
             }
         }
-
-        if (mouseX >= 700) {
-            if (this.posX < -400) {
-            } else {
-                this.posX -= this.vel;
-            }
+    
+        if(mouseX > 825 && mouseX < 875 && mouseY > 325 && mouseY < 375){
+            if(this.posX < -400){     
+            }else{
+                this.posX -= this.vel; 
+            }  
         }
 
         //console.log(this.vel);

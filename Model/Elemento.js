@@ -1,14 +1,19 @@
 class Elemento {
-    constructor(posX, posY) {
+
+    
+    constructor (posX,posY) {
         this.posX = posX;
         this.posY = posY;
-        this.vel = 0;
+        this.vel = 2;
     }
 
-    drawElemento() {
-    }
+    drawElemento () {
 
-    move() {
+    }
+    
+
+    move () {
+
     }
 
 }

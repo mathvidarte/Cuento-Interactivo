@@ -1,36 +1,36 @@
 let fondoImagen;
 
 class Fondo extends Parallax {
-    constructor(posX, posY) {
-        super(posX, posY);
+    constructor (posX, posY) {
+        super (posX, posY); 
         this.posX = posX;
         this.posY = posY;
         this.vel = 2;
 
-        fondoImagen = loadImage("images/Fondo.png");
+        fondoImagen = loadImage ("images/Fondo.png");
     }
 
     drawFondo() {
-        image(fondoImagen, this.posX, this.posY);
-
+        image(fondoImagen,this.posX,this.posY);
+       
     }
 
     mover() {
-        if (mouseX <= 200) {
-            if (this.posX >= 0) {
-            } else {
+        if(mouseX > 0 && mouseX < 100 && mouseY > 325 && mouseY < 375){
+            if(this.posX >= 0){
+            }else{
                 this.posX += this.vel;
             }
         }
-
-        if (mouseX >= 700) {
-            if (this.posX < -400) {
-            } else {
-                this.posX -= this.vel;
-            }
+    
+        if(mouseX > 825 && mouseX < 875 && mouseY > 325 && mouseY < 375){
+            if(this.posX < -400){     
+            }else{
+                this.posX -= this.vel; 
+            }  
         }
-
+    
         //console.log(this.vel);
-        //console.log(this.posX);
+       // console.log(this.posX);
     }
 }
