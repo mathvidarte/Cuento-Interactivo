@@ -145,7 +145,7 @@ class Cuento {
         image(this.botonIzq, 25, 350, 50, 50);
         imageMode(CORNER);
 
-        //console.log(cargar);
+        
 
     }
 
