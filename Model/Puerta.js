@@ -4,9 +4,6 @@ let imagenPuertaBrilla;
 class Puerta extends Elemento {
     constructor(posX, posY) {
         super(posX, posY);
-        this.posX = posX;
-        this.posY = posY;
-        this.vel = 2;
 
         imagenPuerta = loadImage('images/puerta.png');
         imagenPuertaBrilla = loadImage('images/puertaBrilla.png');
