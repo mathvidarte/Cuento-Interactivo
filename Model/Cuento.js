@@ -114,7 +114,6 @@ class Cuento {
         text(this.escena, 30, 100);
 
         //elementos
-        puertaa.drawElemento();
         galletaa.drawElemento();
         llavee.drawElemento();
         pocioon.drawElemento();
@@ -129,6 +128,21 @@ class Cuento {
         imageMode(CORNER);
 
         
+        if (esTarde == true) {
+            fondoDosCuento.drawTarde();
+        }
+
+        if (pintarPuerta === true) {
+            puertaa.drawElemento();
+        }
+        
+        if (abrir === true) {
+            image(this.puertaAbierta, puertaa.getPosX(), puertaa.getPosY(), 158, 140);
+        }
+
+       
+
+        //console.log(cargar);
 
     }
 
@@ -149,7 +163,7 @@ class Cuento {
         crecerMas = aliciaa.getTamdos();
 
         if(mouseX > aliciaa.getPosX() && mouseX < aliciaa.getPosX() + aliciaa.getTam() 
-        && mouseY > aliciaa.getPosY() && mouseY < aliciaa.getPosY() + aliciaa.getTamDos()){
+        && mouseY > aliciaa.getPosY() && mouseY < aliciaa.getPosY() + aliciaa.getTamdos()){
             esTarde = true;
         }
 
@@ -178,21 +192,22 @@ class Cuento {
             pintarPuerta = true;
         }
 
-        if (mouseX > puertaa.getPosX() && mouseX < puertaa.getPosX() + 300
+        if(pintarPuerta == true){
+            if (mouseX > puertaa.getPosX() && mouseX < puertaa.getPosX() + 300
+                && mouseY > puertaa.getPosY() && mouseY < puertaa.getPosY() + 300) {
+                abrir = true;
+            }
+
+        }
+        /*if (mouseX > puertaa.getPosX() && mouseX < puertaa.getPosX() + 300
             && mouseY > puertaa.getPosY() && mouseY < puertaa.getPosY() + 300) {
             abrir = true;
-        }
+        }*/
         console.log(abrir);
+        console.log(esTarde);
     }
 
-    sortList(c) {
-        switch (c) {
-            case 'p':
-                console.log("putos");
-                break;
-        }
-    }
-
+   
 
 
 
