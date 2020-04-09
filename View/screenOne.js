@@ -11,4 +11,8 @@ class ScreenOne {
     moverScreen() {
         fondoScreen.moverController();
     }
+
+    changesScreen () {
+        fondoScreen.changesController();
+    }
 }

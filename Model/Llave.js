@@ -32,4 +32,20 @@ class Llave extends Elemento {
         }
     }
     }
+
+    getPosX () {
+        return this.posX;
+    }
+
+    setPosX(posX){
+        this.posX = posX;
+    }
+
+    getPosY () {
+        return this.posY;
+    }
+
+    setPosX(posY){
+        this.posX = posX;
+    }
 }

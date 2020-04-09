@@ -13,4 +13,8 @@ class Controller {
     moverController() {
         fondos.moverCuento();
     }
+
+    changesController () {
+        fondos.changes();
+    }
 }
