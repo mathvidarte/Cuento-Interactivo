@@ -57,55 +57,6 @@ class Cuento {
         fondoDosCuento.drawFondo();
         fondoCuento.drawFondo();
 
-        //fondos
-        fondoTresCuento = new FondoTres(-400, 141);
-        fondoDosCuento = new FondoDos(-308, 43);
-        fondoCuento = new Fondo(-500, 351);
-
-        //elementos
-        aliciaa = new Alicia(500, 300)
-        galletaa = new Galleta(-320, 365);
-        llavee = new Llave(-250, 410);
-        pocioon = new Pocion(-400, 290);
-        puertaa = new Puerta(-90, 327);
-
-        //elementos
-        if (pintarPuerta === true) {
-            puertaa.drawElemento();
-        }
-
-        galletaa.drawElemento();
-        llavee.drawElemento();
-        pocioon.drawElemento();
-        aliciaa.drawElemento();
-
-
-
-        //botones
-        imageMode(CENTER);
-        image(this.botonDer, 875, 350, 50, 50);
-        imageMode(CORNER);
-        imageMode(CENTER);
-
-        image(this.botonIzq, 25, 350, 50, 50);
-        imageMode(CORNER);
-
-        if (abrir === true) {
-            image(this.puertaAbierta, puertaa.getPosX(), puertaa.getPosY(), 158, 140);
-        }
-    }
-
-
-    drawCuento() {
-        //fondos
-        fondoTresCuento.drawFondo();
-        fondoDosCuento.drawFondo();
-        fondoCuento.drawFondo();
-
-        if (esTarde == true) {
-            fondoDosCuento.drawTarde();
-        }
-
         //titulo
         imageMode(CENTER);
         image(this.titulo, 450, 50);
@@ -114,7 +65,6 @@ class Cuento {
         text(this.escena, 30, 100);
 
         //elementos
-        puertaa.drawElemento();
         galletaa.drawElemento();
         llavee.drawElemento();
         pocioon.drawElemento();
@@ -127,6 +77,18 @@ class Cuento {
         imageMode(CENTER);
         image(this.botonIzq, 25, 350, 50, 50);
         imageMode(CORNER);
+
+        if (esTarde == true) {
+            fondoDosCuento.drawTarde();
+        }
+
+        if (abrir === true) {
+            image(this.puertaAbierta, puertaa.getPosX(), puertaa.getPosY(), 158, 140);
+        }
+
+        if (pintarPuerta === true) {
+            puertaa.drawElemento();
+        }
 
         //console.log(cargar);
 
@@ -149,7 +111,7 @@ class Cuento {
         crecerMas = aliciaa.getTamdos();
 
         if(mouseX > aliciaa.getPosX() && mouseX < aliciaa.getPosX() + aliciaa.getTam() 
-        && mouseY > aliciaa.getPosY() && mouseY < aliciaa.getPosY() + aliciaa.getTamDos()){
+        && mouseY > aliciaa.getPosY() && mouseY < aliciaa.getPosY() + aliciaa.getTamdos()){
             esTarde = true;
         }
 
@@ -183,16 +145,10 @@ class Cuento {
             abrir = true;
         }
         console.log(abrir);
+        console.log(esTarde);
     }
 
-    sortList(c) {
-        switch (c) {
-            case 'p':
-                console.log("putos");
-                break;
-        }
-    }
-
+   
 
 
 

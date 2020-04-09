@@ -20,7 +20,6 @@ class Alicia extends Elemento {
         image(imagenAlicia, this.posX, this.posY, this.tam, this.tamDos);
     
 
-        
         if (mouseX > this.posX && mouseX <this.posX+297 && mouseY > this.posY && mouseY < this.posY +390){
             image(imagenAliciaBrilla, this.posX-30 , this.posY-55, this.tam, this.tamDos);
         }
