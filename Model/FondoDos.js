@@ -5,7 +5,7 @@ class FondoDos extends Parallax{
         super (posX, posY);
         this.posX = posX;
         this.posY = posY;
-        this.vel = 2;
+        this.vel = 1.5;
 
         imagenFondoDos = loadImage("images/FondoDos.png");
     }

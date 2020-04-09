@@ -5,7 +5,7 @@ class Fondo extends Parallax {
         super (posX, posY); 
         this.posX = posX;
         this.posY = posY;
-        this.vel = 3;
+        this.vel = 2;
 
         fondoImagen = loadImage ("images/Fondo.png");
     }
