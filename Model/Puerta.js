@@ -12,7 +12,7 @@ class Puerta extends Elemento {
 
     drawElemento() {
         image(imagenPuerta, this.posX, this.posY, 158, 140);
-        if (mouseX > this.posX && mouseX <this.posX+297 && mouseY > this.posY && mouseY < this.posY +390){
+        if (mouseX > this.posX && mouseX <this.posX+158 && mouseY > this.posY && mouseY < this.posY +140){
             image(imagenPuertaBrilla, this.posX-25, this.posY-30, 210, 200);
         }
     }
