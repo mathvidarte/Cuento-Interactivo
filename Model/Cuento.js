@@ -32,6 +32,8 @@ class Cuento {
 
         this.escena = loadStrings("./data/escena.txt");
 
+        
+
         this.titulo = loadImage("images/titulo.png");
         //botones
         this.botonDer = loadImage("images/der.png");
@@ -140,9 +142,10 @@ class Cuento {
             image(this.puertaAbierta, puertaa.getPosX(), puertaa.getPosY(), 158, 140);
         }
 
-       
+       for (let i = 0; i < this.escena.lenth; i++) {
+           this.cargar = this.escena[i].split(" ");
+       }
 
-        //console.log(cargar);
 
     }
 
