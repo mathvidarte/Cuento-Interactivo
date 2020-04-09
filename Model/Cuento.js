@@ -82,13 +82,15 @@ class Cuento {
             fondoDosCuento.drawTarde();
         }
 
+        if (pintarPuerta === true) {
+            puertaa.drawElemento();
+        }
+        
         if (abrir === true) {
             image(this.puertaAbierta, puertaa.getPosX(), puertaa.getPosY(), 158, 140);
         }
 
-        if (pintarPuerta === true) {
-            puertaa.drawElemento();
-        }
+       
 
         //console.log(cargar);
 
