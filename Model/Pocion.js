@@ -1,5 +1,6 @@
 let imagenPocion;
 let imagenPocionBrilla;
+let PActiva;
 
 class Pocion extends Elemento {
     constructor(posX, posY) {
@@ -7,15 +8,25 @@ class Pocion extends Elemento {
         this.posX = posX;
         this.posY = posY;
         this.vel = 1;
+        PActiva = false;
 
         imagenPocion = loadImage('images/Pocion.png');
+        imagenPocionBrilla = loadImage('images/PocionBrilla.png');
 
     }
 
     drawElemento() {
         image(imagenPocion, this.posX, this.posY, 70, 150);
+       
+       
+          
+        
+        if (mouseX > this.posX && mouseX <this.posX+70 && mouseY > this.posY && mouseY < this.posY +150){
+            image(imagenPocionBrilla, this.posX-5, this.posY-10, 93, 180);
+        }
         
     }
+ 
         
 
     

@@ -1,4 +1,5 @@
 let imagenGalleta;
+let imagenGalletaBrilla;
 
 class Galleta extends Elemento {
     constructor(posX, posY) {
@@ -8,10 +9,17 @@ class Galleta extends Elemento {
         this.vel = 2;
 
         imagenGalleta = loadImage('images/galleta.png');
+        imagenGalletaBrilla = loadImage('images/galletaBrilla.png');
     }
 
     drawElemento() {
         image(imagenGalleta, this.posX, this.posY, 83, 87);
+
+        if (mouseX > this.posX && mouseX <this.posX+83 && mouseY > this.posY && mouseY < this.posY +87){
+            image(imagenGalletaBrilla, this.posX-15, this.posY-10, 105, 110);
+        }
+
+
     }
 
     move() {

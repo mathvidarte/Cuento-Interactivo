@@ -1,4 +1,5 @@
 let imagenPuerta;
+let imagenPuertaBrilla;
 
 class Puerta extends Elemento {
     constructor(posX, posY) {
@@ -8,11 +9,15 @@ class Puerta extends Elemento {
         this.vel = 2;
 
         imagenPuerta = loadImage('images/puerta.png');
+        imagenPuertaBrilla = loadImage('images/puertaBrilla.png');
 
     }
 
     drawElemento() {
         image(imagenPuerta, this.posX, this.posY, 158, 140);
+        if (mouseX > this.posX && mouseX <this.posX+297 && mouseY > this.posY && mouseY < this.posY +390){
+            image(imagenPuertaBrilla, this.posX-25, this.posY-30, 210, 200);
+        }
     }
 
     move() {
