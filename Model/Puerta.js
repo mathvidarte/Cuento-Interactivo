@@ -1,18 +1,21 @@
 let imagenPuerta;
+let imagenPuertaBrilla;
 
 class Puerta extends Elemento {
     constructor(posX, posY) {
         super(posX, posY);
-        this.posX = posX;
-        this.posY = posY;
-        this.vel = 2;
 
         imagenPuerta = loadImage('images/puerta.png');
+        imagenPuertaBrilla = loadImage('images/puertaBrilla.png');
 
     }
 
     drawElemento() {
         image(imagenPuerta, this.posX, this.posY, 158, 140);
+        
+        if (mouseX > this.posX && mouseX <this.posX+158 && mouseY > this.posY && mouseY < this.posY +140){
+            image(imagenPuertaBrilla, this.posX-25, this.posY-30, 210, 200);
+        }
     }
 
     move() {
@@ -25,7 +28,7 @@ class Puerta extends Elemento {
         }
     }
 
-    if(mouseX > 825 && mouseX < 875 && mouseY > 325 && mouseY < 375){
+    if(mouseX > 840 && mouseX < 900 && mouseY > 325 && mouseY < 375){
         if (mouseX >= 700) {
             if (this.posX < 12) {
             } else {
