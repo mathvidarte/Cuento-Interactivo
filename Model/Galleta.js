@@ -3,19 +3,16 @@ let imagenGalleta;
 class Galleta extends Elemento {
     constructor(posX, posY) {
         super(posX, posY);
-        this.posX = posX;
-        this.posY = posY;
-        this.vel = 2;
 
-        imagenGalleta = loadImage('images/galleta.png');
-        //vel = 4;
+        this.imagenGalleta = loadImage('images/galleta.png');
+        
     }
 
     drawElemento() {
-        image(imagenGalleta, this.posX, this.posY, 83, 87);
+        image(this.imagenGalleta, this.posX, this.posY, 83, 87);
     }
 
     move() {
-        //posX -= vel;
+        
     }
 }

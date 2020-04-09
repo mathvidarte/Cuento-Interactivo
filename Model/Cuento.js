@@ -10,39 +10,33 @@ let llavee;
 let pocioon;
 let puertaa;
 
-let escena =[];
-let cargar =[];
+let escena = [];
+let escenaSplit = [];
 
 class Cuento {
-    constructor(){
-    escena = loadStrings("./data/escena.txt");
-    titulo = loadImage ("images/titulo.png");
+    constructor() {
+        
+        escena = loadStrings("./data/escena.txt");
+        titulo = loadImage("images/titulo.png");
 
-   for (let i = 0; i < escena.lenght; i++) {
-        cargar = escena.get(i).split(" ");
+        //fondos
+        fondoTresCuento = new FondoTres(-400, 141);
+        fondoDosCuento = new FondoDos(-308, 43);
+        fondoCuento = new Fondo(-500, 351);
+
+        //elementos
+        puertaa = new Puerta(400, 327);
+        aliciaa = new Alicia(550, 300);
+        galletaa = new Galleta(220, 365);
+        llavee = new Llave(280, 410);
+        pocioon = new Pocion(-400, 290);
+
+
+
     }
 
-    console.log(cargar)
-
-     /*if(cargar.includes("Alicia")){ 
-        }*/
-
-    //fondos
-    fondoTresCuento = new FondoTres(-400,141);
-    fondoDosCuento = new FondoDos(-308,43);
-    fondoCuento = new Fondo(-500,351);
-
-    //elementos
-    aliciaa = new Alicia (550, 300);
-    galletaa = new Galleta (220, 365);
-    llavee = new Llave (280, 410);
-    pocioon = new Pocion (-400, 290);
-    puertaa = new Puerta (400, 327);
-
-
- }
-
     drawCuento() {
+        
         //fondos
         fondoTresCuento.drawFondo();
         fondoDosCuento.drawFondo();
@@ -50,36 +44,49 @@ class Cuento {
 
         //titulo
         imageMode(CENTER);
-        image(titulo,450,50);
+        image(titulo, 450, 50);
         imageMode(CORNER);
         fill(255);
-        text(escena,30,100);
+        //text(escena, 30, 100);
+
 
         //elementos
         puertaa.drawElemento();
         galletaa.drawElemento();
         llavee.drawElemento();
         pocioon.drawElemento();
-        aliciaa.drawElemento();
-
-       
-
         
+        
+
+
+        for (let i = 0; i < escena.lenght; i++) {
+
+            escenaSplit = escena[i].split(" ");
+            
+
+        }
+
+        console.log(escenaSplit);
+        console.log(escena);
+        //console.log(aliciaa.drawElemento);
+
+
+
     }
     moverCuento() {
-        fondoCuento.mover();
+        /*fondoCuento.mover();
         fondoDosCuento.mover();
         fondoTresCuento.mover();
 
-        pocioon.move();
+        pocioon.move();*/
 
     }
 
 
 
-    
-    }
-       
-   
+
+}
+
+
 
 
