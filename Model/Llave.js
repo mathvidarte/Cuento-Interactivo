@@ -4,9 +4,6 @@ let imagenLlaveBrilla;
 class Llave extends Elemento {
     constructor(posX, posY) {
         super(posX, posY);
-        this.posX = posX;
-        this.posY = posY;
-        this.vel = 2;
 
         imagenLlave = loadImage('images/llave.png');
         imagenLlaveBrilla = loadImage('images/llaveBrilla.png');
@@ -29,7 +26,7 @@ class Llave extends Elemento {
             }
         }
     }
-    if(mouseX > 825 && mouseX < 875 && mouseY > 325 && mouseY < 375){
+    if(mouseX > 840 && mouseX < 900 && mouseY > 325 && mouseY < 375){
         if (mouseX >= 700) {
             if (this.posX < -150) {
             } else {

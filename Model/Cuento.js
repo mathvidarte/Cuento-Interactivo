@@ -10,25 +10,22 @@ let llavee;
 let pocioon;
 let puertaa;
 
+let escena = [];
+let cargar = [];
+
 class Cuento {
     constructor() {
-
-        let escena = [];
-        let cargar = [];
+       
         this.escena = loadStrings("./data/escena.txt");
         this.titulo = loadImage("images/titulo.png");
 
         //botones
         this.botonDer = loadImage("images/der.png");
         this.botonIzq = loadImage("images/izq.png");
-        this.aliciaa = new Alicia(550, 300);
 
         for (let i = 0; i < this.escena.lenght; i++) {
-            cargar[i] = this.escena[i].split(" ");
-            
+            cargar= this.escena[i].split("_");
         }
-
-        console.log(cargar);
 
         //fondos
         fondoTresCuento = new FondoTres(-400, 141);
@@ -71,6 +68,9 @@ class Cuento {
         imageMode(CENTER);
         image(this.botonIzq, 25, 350, 50, 50);
         imageMode(CORNER);
+
+        console.log(cargar);
+
     }
 
     moverCuento() {

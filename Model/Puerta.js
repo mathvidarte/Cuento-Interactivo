@@ -27,7 +27,7 @@ class Puerta extends Elemento {
         }
     }
 
-    if(mouseX > 825 && mouseX < 875 && mouseY > 325 && mouseY < 375){
+    if(mouseX > 840 && mouseX < 900 && mouseY > 325 && mouseY < 375){
         if (mouseX >= 700) {
             if (this.posX < 12) {
             } else {
